@@ -1,0 +1,163 @@
+.con_list {
+    &_item {
+        padding: 60px 0 59px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .svg_box {
+            max-width: 100%;
+            width: 1160px;
+            position: relative;
+            &_inner {
+                padding-top: 62.0689%;
+                position: relative;
+            }
+            .svg_cont {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+            }
+
+        }
+        svg {
+            max-width: 100%;
+        }
+        background-repeat: repeat-x;background-position: center center;
+        &1 {
+            background-image: url(../../images/main/main_bg1.png);
+            .link01 {
+                position: absolute;
+                width: 35%;
+                right: 10%;
+                bottom: 6%;
+                .lottie_player {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            .main_story_list {
+                position: absolute;
+                display: flex;
+                width: 30%;
+                left: 38.6%;
+                top: 13%;
+                text-align: left;
+
+                &_item {
+                    width: 50%;
+                    box-sizing: border-box;
+                    &:nth-child(odd) {
+                        padding-right: 5.4%;
+                    }
+                    &:nth-child(even) {
+                        padding-left: 5.4%;
+                    }
+                }
+                &_link {
+                    display: block;
+                    padding: 10%;
+                }
+                .tit {
+                    display: block;
+                    font-size: 14px;
+                    font-weight: 500;
+                    margin-top: 4px;
+                    line-height: 1.2;
+                }
+                .writer_set {
+                    margin-top: 4px;
+                }
+                .sc_tag {
+                    position: absolute;
+                    left: 0;
+                    top: -5px;
+                    z-index: 10;
+                }
+            }
+        }
+        &2 {
+            background-image: url(../../images/main/main_bg2.png);
+            .lottie_player {
+                position: absolute;
+                width: 31%;
+                left: 5%;
+                bottom: 29%;
+                height: auto;
+            }
+            .img_item {
+                position: absolute;
+                width: 15.8%;
+                left: 22.5%;
+                bottom: 6.5%;
+            }
+            .discussion_wrap {
+                transform :translate(925px, 470px);
+            }
+            .discussion_box {
+                &_tit {
+                    font-size: 22px;
+                    line-height: 1;
+                    font-family: 'Godo';
+                    font-weight: bold;
+                }
+                &_cont {
+                    margin-top: 10px;
+                    font-size: 15px;
+                    line-height: 21px;
+                    max-height: 63px;
+                }
+                &_result {
+                    margin-top: 10px;
+                    &_item {
+                        margin-top: 5px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 15px;
+                        line-height: 20px;
+                        i {
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 50%;
+                            margin-right: 4px;
+                        }
+                        .result_percent {
+                            margin-right: 8px;
+                        }
+                        span {
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+        &3 {
+            background-image: url(../../images/main/main_bg3.png);
+        }
+        &4 {
+            background-image: url(../../images/main/main_bg4.png);
+        }
+    }
+
+}
+
+
+@media (max-width: 1920px) {
+    .con_list_item {
+        background-size: cover;
+    }
+}
+
+@media (max-width: 1024px) {
+
+}
+@media (max-width: 930px) {
+
+}
+
+@media (max-width: 767px) {
+
+}

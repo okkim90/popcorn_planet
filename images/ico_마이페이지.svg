@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="32" viewBox="0 0 36 32">
+    <defs>
+        <clipPath id="8c9e8xrh5a">
+            <path data-name="사각형 1661" transform="translate(2 7)" style="fill:#fff" d="M0 0h36v32H0z"/>
+        </clipPath>
+    </defs>
+    <g style="clip-path:url(#8c9e8xrh5a)">
+        <path d="M4.667 50.333v-20a15.008 15.008 0 0 1 10.8-14.4 7 7 0 1 1 8.408 0 15.007 15.007 0 0 1 10.8 14.4v20z" transform="translate(-1.667 -.333)" style="stroke:#f6c34b;stroke-width:2px;fill:#fff" data-name="사람 라인"/>
+    </g>
+    <path data-name="Icon feather-check" d="m14 9-5.5 5.5L6 12" transform="translate(9 13.188)" style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke:#f6c34b;stroke-width:2px"/>
+</svg>

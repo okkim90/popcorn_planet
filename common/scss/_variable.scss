@@ -1,0 +1,15 @@
+/* 컬러 */
+$colors: (
+    key: #f6c34b,
+    key2: #fae1a4,
+    blue: #1e90ff,
+    red: #f00,
+    lblue: #46b8ff,
+    orange: #ffa500,
+    green: #50c785,
+    yellow: #ff0
+);
+
+
+$c_key : map-get($colors, key);
+$c_key2 : map-get($colors, key2);

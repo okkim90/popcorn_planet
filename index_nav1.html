@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>팝콘플레닛</title>
+    <!--스타일 공통-->
+    <link rel="stylesheet" href="./common/css/common.css">
+
+    <!--js 공통-->
+    <script type="text/javascript" src="./common/js/jquery.min.js"></script>
+    <script type="text/javascript" src="./common/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="./common/js/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="https://kit.fontawesome.com/a9123cc962.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./common/js/swiper.min.js"></script>
+    <script type="text/javascript" src="./common/js/common.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="content" class="main">
+            <header id="header" class="header">
+                <div class="header_top">
+                    <div class="header_top_inner">
+                        <h1 class="logo">
+                            <a href="">
+                                <span class="blind">팝콘플레닛</span>
+                                <img src="./images/common/logo.svg" alt="팝콘플레닛">
+                            </a>
+                        </h1>
+                        <button class="btn_nav">
+                            <span class="blind">전체메뉴</span>
+                            <div class="bar_box">
+                                <span class="bar top"></span>
+                                <span class="bar mid"></span>
+                                <span class="bar bot"></span>
+                            </div>
+                        </button>
+                        <div class="header_util">
+                            <!--로그아웃 상태-->
+                            <button type="button" class="btn_sign ty_logout">
+                                <i class="btn_sign_ico"></i>
+                                <span class="btn_sign_txt">로그인</span>
+                            </button>
+                            <!--// 로그아웃 상태-->
+                            <!-- 로그인 상태-->
+
+                            <!-- <a href="" class="btn_mypage"><span class="blind">마이페이지</span></a> -->
+
+                            <!--// 로그인 상태-->
+
+                            <!-- 햄버거버튼 삭제
+                            <button type="button" class="btn_lm">
+                                <span class="blind">전체메뉴</span>
+                                <div class="bar_box">
+                                    <span class="bar top"></span>
+                                    <span class="bar mid"></span>
+                                    <span class="bar bot"></span>
+                                </div>
+                            </button>
+                            -->
+                        </div>
+                    </div>
+                </div>
+                <div class="nav_all">
+                    <button class="close_nav_all"><span class="blind">전체메뉴 닫기</span></button>
+                    <div class="nav_all_inner">
+                        <div class="nav_all_top taC">
+                            <!-- 로그인 X -->
+                            <div class="log_info nav_all_top_cont">
+                                <div class="log_in_box">
+                                    <img src="./images/nav_all/no_login.svg" alt="팝콘플레이 - 팡터지는 재미" class="log_in_box_img">
+                                    <p>팝콘플래닛에 로그인하면 <br> 더 많은 코니들을 만날 수 있어요!</p>
+                                    <button class="btn_login">로그인</button>
+                                </div>
+                                <div class="join_box">
+                                    <p>팝콘플래닛에 가입해서 <br> 자신만의 코니들을 만들어 봐요!</p>
+                                    <button class="btn_join">통합회원가입</button>
+                                </div>
+                                <a href="" class="btn_pp">
+                                    <img src="./images/nav_all/whatispp.svg" alt="팝콘플래닛 이란?">
+                                </a>
+                            </div>
+                            <!-- // 로그인 X -->
+                        </div>
+                        <a class="nav_all_btn_main">
+                            <img src="./images/common/logo_w.svg" class="logo" alt="팝콘플래닛">
+                            <span>바로가기</span>
+                            <img src="./images/nav_all/btn_arrow.svg" class="arrow" alt="">
+                        </a>
+                        <div class="nav_all_list_wrap">
+                            <ul class="nav_all_list">
+                                <li class="nav_all_item">
+                                    <a href="" class="nav_all_item_tit">스토리<b class="fc_key">콘</b></a>
+                                    <strong class="nav_all_item_tit btn_dep2">스토리콘</strong>
+                                    <ul class="nav_all_dep2">
+                                        <li class="nav_all_dep2_item"><a href="">소설</a></li>
+                                        <li class="nav_all_dep2_item"><a href="">웹툰</a></li>
+                                        <li class="nav_all_dep2_item"><a href="">갤러리</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav_all_item">
+                                    <a href="" class="nav_all_item_tit">기사<b class="fc_key">콘</b></a>
+                                    <strong class="nav_all_item_tit btn_dep2">기사콘</strong>
+                                    <ul class="nav_all_dep2">
+                                        <li class="nav_all_dep2_item"><a href="">기사</a></li>
+                                        <li class="nav_all_dep2_item"><a href="">토론터</a></li>
+                                        <li class="nav_all_dep2_item"><a href="">기자단</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav_all_item">
+                                    <a href="" class="nav_all_item_tit">플레이<b class="fc_key">콘</b></a>
+                                    <strong class="nav_all_item_tit btn_dep2">플레이콘</strong>
+                                    <ul class="nav_all_dep2">
+                                        <li class="nav_all_dep2_item"><a href="">어린이과학동아</a></li>
+                                        <li class="nav_all_dep2_item"><a href="">어린이수학동아</a></li>
+                                        <li class="nav_all_dep2_item"><a href="">오디오쏙</a></li>
+                                        <li class="nav_all_dep2_item"><a href="">어과수TV</a></li>
+                                        <li class="nav_all_dep2_item"><a href="">놀이터</a></li>
+                                        <li class="nav_all_dep2_item"><a href="">커뮤니티</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav_all_item">
+                                    <a href="" class="nav_all_item_tit">시민과학<b class="fc_key">콘</b></a>
+                                    <strong class="nav_all_item_tit btn_dep2">시민과학콘</strong>
+                                    <ul class="nav_all_dep2">
+                                        <li class="nav_all_dep2_item"><a href="">지구사랑탐사대</a></li>
+                                        <li class="nav_all_dep2_item"><a href="">우동수비대</a></li>
+                                        <li class="nav_all_dep2_item"><a href="">플라스틱다이어트</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav_all_item">
+                                    <a href="" class="nav_all_item_link">공지사항</a>
+                                </li>
+                                <li class="nav_all_item">
+                                    <a href="" class="nav_all_item_link">마이페이지</a>
+                                </li>
+                            </ul>
+                            <a href="" class="btn_pp">
+                                <img src="./images/nav_all/whatispp.svg" alt="팝콘플래닛 이란?">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div id="container" class="main">
+                <div style="height: 1000px;background:#eee"></div>
+            </div>
+            <footer id="footer" class="footer">
+                <ul class="footer_menu">
+                    <li><a href="">회사소개</a></li>
+                    <li><a href="">광고안내</a></li>
+                    <li><a href="">개인정보취급방침</a></li>
+                </ul>
+                <div class="footer_policy">
+                    <h2 class="footer_policy_tit">
+                        <button type="button" class="btn_policy">㈜동아사이언스 키즈 플랫폼 <i></i></button>
+                    </h2>
+                    <div class="txt_box">
+                        ㈜동아사이언스 팝콘플래닛, 스토리콘 | 대표 : 장경애 <br>
+                        개인정보관리책임자 : <span>김수희 (privacy@dongascience.com) |</span> <span>청소년보호책임자 : 조기견</span> <br><br>
+                        서울시 용산구 청파로 109, 7층 (04370) | 문의 : 02-6749-2000 ｜팩스 : 02-3148-0789  사업자등록번호 : 101-81-62201 (사업자정보확인) | 통신판매업신고번호 : 제2013-서울용산-01101호 | 온라인 결제를 위한 PG사의 구매안전서비스(가입사실 확인)
+                    </div>
+                </div>
+                <p class="copy">Copyright © Dongascience. All right reserved.</p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script>
+        var swiper = new Swiper('.con_list',{
+            slidesPerView: 1,
+            speed: 600,
+            //effect: "fade",
+            loop: true,
+            // autoplay: {
+            //     delay: 4500,
+            //     disableOnInteraction: false,
+            // },
+        });
+    </script>
+</body>
+</html>

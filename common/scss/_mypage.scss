@@ -1,0 +1,22 @@
+.mp_myinfo {
+    &_cont {
+        display: flex;
+        padding: 40px;
+        border-radius: 0 0 6px 6px;
+    }
+    &_left {
+        width: 360px;
+        flex-shrink: 0;
+    }
+    &_right {
+        flex: 1;
+        min-width: 0;
+    }
+
+
+    .reporter_card_wrap {
+        padding: 40px 0;
+        border: 1px solid #ddd;
+        border-radius: 20px;
+    }
+}
