@@ -1,22 +1,388 @@
+
+
+
+
 .mp_myinfo {
+
     &_cont {
         display: flex;
+        align-items: center;
         padding: 40px;
         border-radius: 0 0 6px 6px;
     }
     &_left {
         width: 360px;
         flex-shrink: 0;
+        align-self: flex-start;
     }
     &_right {
         flex: 1;
         min-width: 0;
+        padding-left: 50px;
+
+        .top_cont {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 20px;
+        }
+        .mp_member {
+            &_name {
+                display: flex;
+                align-items: center;
+                .name {
+                    font-size: 32px;
+                    line-height: 1.1;
+                }
+                .tag_level {
+                    margin-left: 10px;
+                }
+            }
+            &_mail {
+                margin-top: 10px;
+                font-size: 18px;
+                line-height: 1.33;
+            }
+        }
     }
+
 
 
     .reporter_card_wrap {
         padding: 40px 0;
         border: 1px solid #ddd;
         border-radius: 20px;
+    }
+}
+
+
+
+
+.list_activity {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.pf_cont {
+    &_sec {
+        padding: 20px 0;
+        & + & {
+            border-top: 1px solid #eee;
+        }
+    }
+    .id_box {
+        display: flex;
+        &_input {
+            height: 40px;
+            background-color: #fef7e8;
+            padding: 0 10px;
+            font-size: 14px;
+            border: none;
+            width: auto;
+            flex: 1;
+            min-width: 0;
+            margin-right: 10px;
+            border-radius: 4px;
+            outline: none;
+        }
+        .btn_mid {
+            flex-shrink: 0;
+        }
+    }
+    .tit {
+        display: block;
+        font-size: 15px;
+        line-height: 21px;
+        margin-bottom: 10px;
+        .tip {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 300;
+            color: #666;
+        }
+    }
+    .input_list {
+        font-size: 0;
+        margin-left: -10px;
+        .sc_radio {
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 10px;
+        }
+    }
+}
+
+.dsp_cont {
+    padding-bottom: 30px;
+    .sub_sec_tit {
+        .lv_info {
+            display: flex;
+            &_item {
+                display: flex;
+                align-items: center;
+                & + .lv_info_item {
+                    margin-left: 20px;
+                }
+                &_tit {
+                    font-size: 15px;
+                    font-weight: 400;
+                }
+                .cont {
+                    font-size: 18px;
+                    margin-left: 6px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    .lv_box {
+        &_status {
+            display: flex;
+            padding-top: 35px;
+            &_item {
+                text-align: center;
+                flex: 1;
+                .txt_box {
+                    font-size: 12px;
+                    line-height: 1.2;
+                    margin-top: 7px;
+                }
+                .lv_bar {
+                    display: block;
+                    position: relative;
+                    height: 6px;
+                    width: 100%;
+                    &.lv1 {
+                        background-color: #e74c3c;
+                        .lv_tooltip {
+                            background-color: #e74c3c;
+                            &::after {
+                                border-left-color: #e74c3c;
+                            }
+                        }
+                    }
+                    &.lv2 {
+                        background-color: #e97820;
+                        .lv_tooltip {
+                            background-color: #e97820;
+                            &::after {
+                                border-left-color: #e97820;
+                            }
+                        }
+                    }
+                    &.lv3 {
+                        background-color: #ecb000;
+                        .lv_tooltip {
+                            background-color: #ecb000;
+                            &::after {
+                                border-left-color: #ecb000;
+                            }
+                        }
+                    }
+                    &.lv4 {
+                        background-color: #b6ce00;
+                        .lv_tooltip {
+                            background-color: #b6ce00;
+                            &::after {
+                                border-left-color: #b6ce00;
+                            }
+                        }
+                    }
+                    &.lv5 {
+                        background-color: #55aad8;
+                        .lv_tooltip {
+                            background-color: #55aad8;
+                            &::after {
+                                border-left-color: #55aad8;
+                            }
+                        }
+                    }
+                    &.lv6 {
+                        background-color: #3070ae;
+                        .lv_tooltip {
+                            background-color: #3070ae;
+                            &::after {
+                                border-left-color: #3070ae;
+                            }
+                        }
+                    }
+                    &.lv7 {
+                        background-color: #8650c7;
+                        .lv_tooltip {
+                            background-color: #8650c7;
+                            &::after {
+                                border-left-color: #8650c7;
+                            }
+                        }
+                    }
+                }
+
+                &.on {
+                    .lv_tooltip {
+                        display: block;
+                    }
+                    .txt_box {
+                        font-weight: bold;
+                    }
+                }
+                .lv_tooltip {
+                    display: none;
+                    position: absolute;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    background-color: #ddd;
+                    line-height: 30px;
+                    text-align: center;
+                    top: -35px;
+                    left: 50%;
+                    margin-left: -15px;
+                    z-index: 10;
+                    font-size: 18px;
+                    font-weight: bold;
+                    font-family: Arial;
+                    color: #fff;
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        border-top: 10px solid transparent;
+                        border-bottom: 10px solid transparent;
+                        border-left: 10px solid #ddd;
+                        left: 50%;
+                        bottom: -5px;
+                        margin-left: -2.5px;
+                        z-index: -1;
+                    }
+                }
+            }
+        }
+        &_info {
+            margin-top: 25px;
+            font-size: 15px;
+            line-height: 40px;
+            border-radius: 6px;
+            background-color: #fef7e8;
+        }
+    }
+    .point_info {
+        margin-top: 40px;
+    }
+}
+
+
+
+@media (max-width:1024px) {
+    .mp_myinfo {
+        &_cont {
+            display: block;
+        }
+        &_left {
+            margin: 0 auto;
+            width: auto;
+            max-width: 360px;
+        }
+        &_right {
+            padding-left: 0;
+            margin-top: 40px;
+        }
+    }
+
+}
+
+@media (max-width: 767px) {
+    .mp_myinfo {
+
+
+
+        &_right {
+            margin-top: 30px;
+            .top_cont {
+                display: block;
+                .mp_member {
+                    text-align: center;
+                    margin-bottom: 20px;
+                    padding: 15px;
+                    background-color: #fef7e8;
+                    border-radius: 6px;
+                    border: 1px solid $c_key2;
+                    &_name {
+                        justify-content: center;
+                        .name {
+                            font-size: 20px;
+                        }
+                    }
+                    &_mail {
+                        font-size: 14px;
+                        margin-top: 5px;
+                    }
+                }
+                .btn_big {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+
+
+    .mp_myinfo_cont {
+        padding: 20px;
+    }
+
+
+    .dsp_cont {
+        padding-bottom: 40px;
+        border-bottom: none !important;
+        .sub_sec_tit {
+            display: block;
+            padding: 0;
+            height: auto;
+            .tit {
+                padding: 0 20px;
+                height: 60px;
+                display: flex;
+                align-items: center;
+                border-bottom: 1px solid $c_key2;
+            }
+            .lv_info {
+                padding: 0 20px;
+                display: block;
+                &_item {
+                    border-bottom: 1px solid #ddd;
+                    height: 44px;
+                    &_tit {
+                        width: 120px;
+                        font-size: 13px;
+                    }
+                    & + .lv_info_item {
+                        margin-left: 0;
+                    }
+                    .cont {
+                        margin-left: 0;
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+        .lv_box {
+            margin-top: 20px;
+            &_status {
+                &_item {
+                    .txt_box {
+                        font-size: 11px;
+                        .lv_range {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            &_info {
+                font-size: 13px;
+            }
+        }
+        .point_info {
+            margin-top: 30px;
+        }
     }
 }

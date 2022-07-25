@@ -10,6 +10,16 @@ $colors: (
     yellow: #ff0
 );
 
+$lv: (
+    1: #e74c3c,
+    2: #e97820,
+    3: #ecb000,
+    4: #b6ce00,
+    5: #55aad8,
+    6: #3070ae,
+    7: #8650c7
+);
+
 
 $c_key : map-get($colors, key);
 $c_key2 : map-get($colors, key2);

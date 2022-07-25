@@ -28,6 +28,13 @@
     }
 }
 
+@each $key, $color in $lv {
+    .lv_#{$key} {
+        color: $color;
+    }
+}
+
+
 .m_only {
     display: none;
 }
@@ -79,6 +86,7 @@
         padding-top: 100px;
         min-height: calc(100vh - 229px);
         background-color: #fef7e8;
+        padding-bottom: 80px;
     }
 
     &.sub_m {
@@ -510,6 +518,8 @@
 
 
 .sub_tit {
+    position: relative;
+    z-index: 99;
     text-align: center;
     height: 120px;
     display: flex;
@@ -525,6 +535,8 @@
 
 .sub_nav {
     display: flex;
+    position: relative;
+    z-index: 10;
     &_wrap {
         position: relative;
         .sub_nav_img {
@@ -535,7 +547,7 @@
     }
     &_item {
         flex: 1;
-        max-width: 200px;
+        max-width: 170px;
         height: 60px;
         & + & {
             margin-left: -1px;
@@ -548,13 +560,13 @@
         align-items: center;
         justify-content: center;
         font-size: 16px;
-        background-color: rgba(#fff,.7);
+        background-color: rgba(254,252,248,1);
         color: #424242;
         border: 1px solid $c_key2;
         border-bottom: none;
         border-radius: 6px 6px 0 0;
         box-sizing: border-box;
-
+        text-align: center;
 
         &.on {
             background-color: #fff;
@@ -579,13 +591,61 @@
 .sub_sec {
     background-color: #fff;
     border-radius: 6px;
+
+    &_wrap {
+        display: flex;
+        margin-left: -5px;
+        margin-right: -5px;
+        .sec {
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        .sec_s {
+            width: 360px;
+            flex-shrink: 0;
+        }
+        .sec_b {
+            flex: 1;
+        }
+        .sub_sec {
+            margin-top: 10px;
+        }
+    }
+    &.has_nav {
+        border-top-left-radius: 0;
+    }
     &.ty_bd {
         border: 1px solid $c_key2;
     }
 
     &_inner {
         padding: 0  40px;
+        &.ty2 {
+            padding: 20px 40px;
+        }
     }
+
+    &_tit {
+        .tit {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 40px;
+        border-bottom: 1px solid $c_key2;
+
+        &.no_bd {
+            border-bottom: none;
+        }
+    }
+    &_btns {
+        padding: 30px 0;
+        border-top: 1px solid $c_key2;
+    }
+
 }
 
 
@@ -602,6 +662,9 @@
         }
         &.ty_bot3 {
             margin-top: 10px;
+        }
+        &.ty_top {
+            margin-bottom: 30px;
         }
         &.taC {
             text-align: center;
@@ -747,10 +810,10 @@
     &_mid {
         display: inline-block;
         vertical-align: top;
-        height: 36px;
-        line-height: 34px;
+        height: 40px;
+        line-height: 38px;
         box-sizing: border-box;
-        border-radius: 8px;
+        border-radius: 4px;
         border: 1px solid $c_key;
         background-color: $c_key;
         text-align: center;
@@ -762,6 +825,29 @@
         &.white {
             color: $c_key;
             background-color: #fff;
+        }
+    }
+    &_big {
+        display: inline-block;
+        vertical-align: top;
+        height: 50px;
+        line-height: 48px;
+        box-sizing: border-box;
+        border-radius: 4px;
+        border: 1px solid $c_key;
+        background-color: $c_key;
+        text-align: center;
+        padding: 0 20px;
+        min-width: 120px;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 500;
+        &.white {
+            color: $c_key;
+            background-color: #fff;
+        }
+        &.red {
+            background-color: #ff5050;
         }
     }
     &_more {
@@ -2170,41 +2256,99 @@
         z-index: -999;
         opacity: 1;
         &:checked ~ .sc_radio_btn {
-            border-color: rgba(94, 37, 199, 0.5);
-            color: #5e25c7;
-            &::before {
-                background-color: #5e25c7;
-                border-color: #5e25c7;
+            border-color: $c_key;
+            color: $c_key;
+            font-weight: 500;
+            .sc_radio_btn_ico {
+                border-color: $c_key;
+                &::before {
+                    background-color: $c_key;
+                }
             }
+
         }
     }
     &_btn {
         display: flex;
-        padding: 0 8px;
-        font-size: 12px;
+        padding: 0 15px;
+        font-size: 14px;
         font-weight: 500;
         color: #424242;
-        line-height: 22px;
-        height: 24px;
-        border: 1px solid #f5f5f5;
-        border-radius: 12px;
+        line-height: 38px;
+        height: 40px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
         box-sizing: border-box;
         align-items: center;
-        &::before {
-            content:'';
-            width: 8px;
-            height: 8px;
+        cursor: pointer;
+        user-select: none;
+        &_ico {
+            width: 12px;
+            height: 12px;
             border-radius: 50%;
-            border: 1px solid #ccc;
+            border: 1px solid #ddd;
             box-sizing: border-box;
-            margin-right: 5px;
+            position: relative;
+            margin-right: 10px;
+            &::before {
+                content: '';
+                position: absolute;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background-color: #ddd;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+
+}
+
+
+
+.pp_tbl {
+
+    width: 100%;
+    text-align: left;
+    &.tlF {
+        table-layout: fixed;
+    }
+    &.taC {
+        text-align: center;
+    }
+    border-top: 1px solid $c_key2;
+    line-height: 1.4;
+    td, th {
+        border-bottom: 1px solid #eee;
+        padding: 5px 10px;
+        box-sizing: border-box;
+    }
+    th {
+        font-size: 15px;
+        font-weight: 500;
+        white-space: nowrap;
+    }
+    td {
+        font-size: 14px;
+        color: #666;
+
+    }
+    &.ty1 {
+        td, th {
+            height: 50px;
+        }
+    }
+    &.ty2 {
+        td, th {
+            height: 60px;
         }
     }
 }
 
 
 .no_result {
-
     &_wrap {
         text-align: center;
         margin: 50px 0;
@@ -2248,6 +2392,9 @@
 
 
 
+
+
+
 @media (max-width:1024px) {
 
     .header {
@@ -2265,6 +2412,21 @@
     }
     .inner {
         padding: 0 30px;
+    }
+
+    .sub_sec {
+        &_wrap {
+            display: block;
+            margin-left: 0;
+            margin-right: 0;
+            .sec {
+                margin-left: 0;
+                margin-right: 0;
+            }
+            .sec_s {
+                width: 100%;
+            }
+        }
     }
 
 }
@@ -2290,6 +2452,13 @@
         }
         @at-root #header.sub_header ~ &.sub_m {
 
+        }
+        &.sub {
+            padding-top: 60px;
+            padding-bottom: 0;
+            .inner {
+                padding: 0;
+            }
         }
     }
 
@@ -2531,4 +2700,77 @@
             }
         }
     }
+
+
+    .sub_tit {
+        height: auto;
+        padding: 30px 0 24px;
+        font-size: 20px;
+        i {
+            line-height: 0;
+            margin-right: 6px;
+            img {
+                height: 24px;
+            }
+        }
+    }
+    .sub_nav {
+        &_wrap {
+            .sub_nav_img {
+                display: none;
+            }
+        }
+        &_link {
+            font-size: 12px;
+            line-height: 1.2;
+            padding: 0 7px;
+            letter-spacing: -0.3px;
+            &.on {
+                font-size: 12px;
+            }
+        }
+        &_item {
+            height: 44px;
+        }
+    }
+
+
+    .sub_sec {
+        &_tit {
+            padding: 0 20px;
+            height: 60px;
+        }
+        &.ty_bd {
+            border-radius: 0;
+            border-left: none;
+            border-right: none;
+        }
+        &_inner {
+            padding: 0 20px;
+            &.ty2 {
+                padding: 20px ;
+            }
+        }
+    }
+
+    .pp_tbl {
+        &.ty1 {
+            td, th {
+                height: 40px;
+            }
+        }
+        &.ty2 {
+            td, th {
+                height: 50px;
+            }
+        }
+        th {
+            white-space: normal;
+            font-size: 13px;
+        }
+        td {
+            font-size: 12px;
+        }
+    }
+
 }
