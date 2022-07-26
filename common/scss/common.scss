@@ -592,10 +592,18 @@
     background-color: #fff;
     border-radius: 6px;
 
+
     &_wrap {
         display: flex;
         margin-left: -5px;
         margin-right: -5px;
+        margin-top: -10px;
+
+
+        @at-root .sub_sec + & , & + & {
+            margin-top: 0;
+        }
+
         .sec {
             margin-left: 5px;
             margin-right: 5px;
@@ -625,6 +633,7 @@
         }
     }
 
+
     &_tit {
         .tit {
             font-size: 18px;
@@ -644,6 +653,11 @@
     &_btns {
         padding: 30px 0;
         border-top: 1px solid $c_key2;
+        display: flex;
+        justify-content: center;
+        [class^=btn] {
+            margin: 0 5px;
+        }
     }
 
 }
@@ -826,6 +840,11 @@
             color: $c_key;
             background-color: #fff;
         }
+        &.l_red {
+            background-color: #fff;
+            border-color: #ff5050;
+            color: #ff5050;
+        }
     }
     &_big {
         display: inline-block;
@@ -846,9 +865,15 @@
             color: $c_key;
             background-color: #fff;
         }
+        &.white2 {
+            color: #424242;
+            background-color: #fff;
+            border-color: #ccc;
+        }
         &.red {
             background-color: #ff5050;
         }
+
     }
     &_more {
         display: inline-block;
@@ -2204,6 +2229,19 @@
     }
 }
 
+.chk_agree {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    padding-left: 22px;
+    font-size: 12px;
+    line-height: 1.4;
+    input[type="checkbox"] {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}
 
 .sc_check {
     display: inline-block;
@@ -2744,6 +2782,9 @@
             border-radius: 0;
             border-left: none;
             border-right: none;
+            &.m_bb_n {
+                border-bottom: none;
+            }
         }
         &_inner {
             padding: 0 20px;

@@ -6,7 +6,7 @@
       }
 
       .cls-1, .cls-2, .cls-3, .cls-4 {
-        stroke: #3cb371;
+        stroke: #ff5050;
         stroke-width: 2px;
       }
 
