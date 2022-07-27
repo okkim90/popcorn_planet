@@ -442,6 +442,10 @@
         .select_ty1 {
             max-width: 100px;
         }
+        .btn_certify {
+            width: 100px;
+            padding: 0;
+        }
     }
     .form_caution {
         margin-top: 10px;
@@ -482,6 +486,10 @@
             padding-right: calc(50% + 5px);
         }
     }
+}
+
+.sub_sec_list {
+    padding-bottom: 30px;
 }
 
 
@@ -627,5 +635,9 @@
             //     }
             // }
         }
+    }
+
+    .sub_sec_list {
+        padding-bottom: 40px;
     }
 }

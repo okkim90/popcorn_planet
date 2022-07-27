@@ -51,22 +51,67 @@
 }
 
 .pp_list {
+
+    &_top {
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &_count {
+            font-size: 18px;
+        }
+        &_right {
+            white-space: nowrap;
+            .select_ty1 {
+                width: 100px;
+            }
+        }
+    }
     &_item {
         & + & {
             margin-top: 20px;
         }
     }
 
-    &.ty_freeboard {
 
+    &.ty_free {
+        border-top: 1px solid #ddd;
         .pp_list_item {
-            padding-top: 15px;
-            border-top: 1px solid #f1f1f1;
             & + .pp_list_item {
-                margin-top: 15px;
+                margin-top: 0;
+            }
+            border-bottom: 1px solid #eee;
+        }
+
+        .pp_list_link {
+            padding: 19px 0;
+            align-items: center;
+        }
+        .pp_list_date {
+            padding-left: 10px;
+        }
+        .sc_thumb_info {
+            align-items: center;
+            padding: 0 10px;
+        }
+    }
+
+    &.ty_freeboard {
+        border-top: 1px solid #ddd;
+        .pp_list_item {
+            border-bottom: 1px solid #eee;
+            & + .pp_list_item {
+                margin-top: 0;
+            }
+            .pp_list_link {
+                padding: 15px 0;
+            }
+            .sc_tag_box {
+                margin-bottom: 4px;
             }
         }
     }
+
     &.ty_expedition {
         .pp_list_thumb {
             width: 80px;
@@ -124,15 +169,18 @@
         }
         min-width: 0;
         padding-left: 10px;
+        @at-root .ty_free & {
+            padding-left: 0;
+            display: flex;
+        }
         @at-root .ty_freeboard & {
             padding-left: 0;
         }
         .tit {
-            font-size: 13px;
-            line-height: 18px;
-            max-height: 36px;
+            font-size: 14px;
+            line-height: 20px;
             letter-spacing: -0.13px;
-            font-weight: 500;
+            font-weight: 400;
             .sc_ico {
                 margin-right: 2px;
             }
@@ -140,6 +188,24 @@
     }
     .writer_set {
         margin-top: 6px;
+    }
+    &_ico {
+        line-height: 0;
+        padding-right: 12px;
+    }
+    &_chk {
+        margin-right: 10px !important;
+    }
+    &_date {
+        font-size: 12px;
+        color: #999;
+    }
+    &_nocont {
+        text-align: center;
+        padding: 80px 0;
+        font-size: 20px;
+        font-weight: 500;
+        border-bottom: 1px solid #f1f1f1;
     }
 }
 
@@ -291,4 +357,30 @@
             font-size: 12px;
         }
     }
+
+    .pp_list {
+        &_top {
+            &_count {
+                font-size: 14px;
+            }
+            &_right {
+                .btn_mid, .select_ty1, .select_ty1.ty_big {
+                    height: 30px;
+                    line-height: 28px;
+                }
+            }
+        }
+        &.ty_free {
+            .pp_list_link {
+                padding: 15px 0;
+            }
+        }
+        &_txt {
+            .tit {
+                font-size: 13px;
+                line-height: 18px;
+            }
+        }
+    }
+
 }
