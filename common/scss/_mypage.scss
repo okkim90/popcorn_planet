@@ -405,6 +405,46 @@
     }
 }
 
+.alert_setting {
+    padding: 40px 0;
+    &_list {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    &_item {
+        padding: 20px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .txt_box {
+            padding-right: 10px;
+        }
+        .tit {
+            display: block;
+            font-size: 16px;
+            line-height: 1.4;
+            margin-bottom: 6px;
+        }
+        .txt {
+            font-size: 13px;
+            line-height: 1.4;
+            color: #999;
+            & + .txt {
+                margin-top: 2px;
+            }
+            &.fc_red {
+                color: map-get($colors,red);
+            }
+        }
+        & + & {
+            border-top: 1px solid #eee;
+        }
+        .chk_toggle {
+            flex-shrink: 0;
+        }
+    }
+}
+
 .form_sec {
     padding: 20px 0;
 
@@ -643,5 +683,17 @@
 
     .sub_sec_list {
         padding-bottom: 40px;
+    }
+
+    .alert_setting {
+        padding: 20px 0;
+        &_item {
+            .tit {
+                font-size: 15px;
+            }
+            .txt {
+                font-size: 12px;
+            }
+        }
     }
 }

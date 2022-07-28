@@ -24,33 +24,15 @@
         height: 100%;
     }
     .layer_popup_cont {
-        display: flex;
-        max-height: 100%;
-        max-width: 100%;
+        width: 100%;
+        max-width: 320px;
+        box-sizing: border-box;
+        background-color: #fff;
+        padding: 30px 20px;
+        border-radius: 20px 0 20px 20px;
         position: relative;
     }
-    .layer_popup_contents {
-        width: 700px;
-        padding: 20px;
-        background-color: #fff;
-        max-height: 100%;
-        max-width: 100%;
-        overflow-y: auto;
-        box-sizing: border-box;
-        border-radius: 12px 0 12px 12px;
 
-        &::-webkit-scrollbar {
-            width: 6px;
-        }
-        &::-webkit-scrollbar-thumb {
-            background-color: #646464;
-            border-radius: 3px;
-        }
-        &::-webkit-scrollbar-track {
-            background-color: #ccc;
-            border-radius: 3px;
-        }
-    }
     .close_popup {
         position: absolute;
         width: 40px;
@@ -81,6 +63,47 @@
             background-color: #333;
         }
     }
+    .popup_tit {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        .tit {
+            font-size: 15px;
+            line-height: 1.4;
+            letter-spacing: -0.15px;
+            font-weight: 500;
+        }
+        &.taC {
+            justify-content: center;
+            .tit {
+                text-align: center;
+            }
+        }
+        .date {
+            font-size: 12px;
+            line-height: 1.4;
+        }
+    }
+    .popup_msg {
+        border: 1px solid #ccc;
+        padding: 10px;
+        font-size: 12px;
+        line-height: 1.4;
+        color: #666;
+        max-height: 140px;
+        box-sizing: border-box;
+        overflow-y: auto;
+    }
+    .popup_btns {
+        margin-top: 20px;
+    }
+    .pw_input {
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+
 }
 
 .write_tip {

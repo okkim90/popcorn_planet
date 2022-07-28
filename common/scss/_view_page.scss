@@ -58,6 +58,9 @@
         }
         .vp_tit_bot {
             margin-top: 17px;
+            &.ty2 {
+                margin-top: 10px;
+            }
             &.ty_writer {
                 display: flex;
                 justify-content: space-between;

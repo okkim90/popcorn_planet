@@ -240,7 +240,7 @@
                                             <p class="mp_member_mail">okkim@donga.com</p>
                                         </div>
                                     </div>
-                                    <button type="button" class="btn_big red">프로필 수정하기</button>
+                                    <button type="button" class="btn_big red" onclick="open_popup(this)" data-popup="popup_pw">프로필 수정하기</button>
                                 </div>
                                 <table class="pp_tbl ty2">
                                     <caption>프로필</caption>
@@ -522,6 +522,20 @@
                                 </div>
 
 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layer_popup popup_pw">
+                    <div class="layer_popup_inner">
+                        <div class="layer_popup_cont taC">
+                            <button class="close_popup" onclick="close_popup(this);"><span class="blind">팝업닫기</span></button>
+                            <div class="popup_tit taC">
+                                <strong class="tit">개인 정보 변경을 위해 <br> 비밀번호를 입력해주세요.</strong>
+                            </div>
+                            <input type="password" class="input_ty1 pw_input" placeholder="비밀번호 입력">
+                            <div class="popup_btns taC">
+                                <button class="btn_mid red" onclick="location.href='mypage_modify.html'">확인</button>
                             </div>
                         </div>
                     </div>
