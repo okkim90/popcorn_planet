@@ -10,10 +10,14 @@
     <link rel="stylesheet" href="./common/css/pp_common.css">
 </head>
 <body>
-    <div class="pp_popup">
+    <!-- 회원가입 팝업 -->
+    <!-- [DEV]
+        활성화 'on' class
+    -->
+    <div class="pp_popup on">
         <div class="pp_popup_inner">
             <div class="pp_popup_cont taC">
-                <button class="pp_popup_close" onclick="close_pp_popup(this);"><span class="blind">팝업닫기</span></button>
+                <button class="pp_popup_close" onclick="this.closest('.pp_popup').classList.remove('on')"><span class="blind">팝업닫기</span></button>
                 <div class="pp_popup_logo">
                     <img src="./images/pp_popup/pp_popup_logo.svg" alt="팝콘플레이">
                 </div>
@@ -24,10 +28,16 @@
             </div>
         </div>
     </div>
-    <div class="pp_popup">
+    <!--// 회원가입 팝업 -->
+
+    <!-- 회원정보 추가 팝업 -->
+    <!-- [DEV]
+        활성화 'on' class
+    -->
+    <div class="pp_popup on">
         <div class="pp_popup_inner">
             <div class="pp_popup_cont taC">
-                <button class="pp_popup_close" onclick="close_pp_popup(this);"><span class="blind">팝업닫기</span></button>
+                <button class="pp_popup_close" onclick="this.closest('.pp_popup').classList.remove('on')"><span class="blind">팝업닫기</span></button>
                 <div class="pp_popup_logo">
                     <img src="./images/pp_popup/pp_popup_logo.svg" alt="팝콘플레이">
                 </div>
@@ -39,5 +49,6 @@
             </div>
         </div>
     </div>
+    <!-- // 회원정보 추가 팝업 -->
 </body>
 </html>

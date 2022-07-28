@@ -889,6 +889,8 @@
 
 .form_sec .form_cont .btn_certify { width: 100px; padding: 0; }
 
+.form_sec .form_cont .form_msg { font-size: 12px; line-height: 18px; }
+
 .form_sec .form_caution { margin-top: 10px; font-size: 12px; line-height: 17px; color: #666; }
 
 .form_sec .form_caution li { position: relative; padding-left: 12px; }
