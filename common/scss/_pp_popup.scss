@@ -70,4 +70,16 @@
     .fc_yellow {
         color: #f6c34b;
     }
+    &.popup_reporter {
+        .pp_popup_cont {
+            padding: 0;
+        }
+        .reporter_card_wrap {
+            width: 100%;
+            padding: 30px 20px;
+            box-sizing: border-box;
+            max-height: calc(100vh - 50px);
+            overflow-y: auto;
+        }
+    }
 }

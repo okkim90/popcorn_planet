@@ -201,3 +201,47 @@
 .pp_popup_btn_box { margin-top: 20px; }
 
 .pp_popup .fc_yellow { color: #f6c34b; }
+
+.pp_popup.popup_reporter .pp_popup_cont { padding: 0; }
+
+.pp_popup.popup_reporter .reporter_card_wrap { width: 100%; padding: 30px 20px; -webkit-box-sizing: border-box; box-sizing: border-box; max-height: calc(100vh - 50px); overflow-y: auto; }
+
+.reporter_card { max-width: 260px; margin: 0 auto; }
+
+.reporter_card_logo { margin-bottom: 10px; }
+
+.reporter_card_thumb_area { display: block; width: 200px; margin: 0 auto; }
+
+.reporter_card_thumb { padding-top: 100%; position: relative; }
+
+.reporter_card_thumb::before { position: absolute; width: 100%; text-align: center; left: -50%; top: 50%; content: 'PRESS'; color: rgba(33, 33, 33, 0.1); font-size: 50px; line-height: 1; letter-spacing: 5px; -webkit-transform: translate(-22px, -50%) rotate(-90deg); transform: translate(-22px, -50%) rotate(-90deg); font-weight: bold; }
+
+.reporter_card_thumb .img_box { overflow: hidden; position: absolute; width: 100%; height: 100%; left: 0; top: 0; border: 4px solid #ff5050; -webkit-box-sizing: border-box; box-sizing: border-box; border-radius: 20px; background-image: url(../../images/reporter/bg_idcard.svg); background-repeat: no-repeat; background-size: cover; background-position: center center; }
+
+.reporter_card_thumb .img_box img { -o-object-fit: cover; object-fit: cover; width: 100%; height: 100%; }
+
+.reporter_card_id { margin-top: 18px; }
+
+.reporter_card_id .name { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; font-size: 30px; letter-spacing: -.3px; line-height: 34px; }
+
+.reporter_card_id .name .log_ico_sns { display: inline-block; width: 34px; height: 34px; border: 1px solid #ddd; border-radius: 4px; overflow: hidden; margin-right: 6px; }
+
+.reporter_card_id .name .log_ico_sns img { width: 100%; }
+
+.reporter_card_id .logo { display: block; margin-top: 9px; }
+
+.reporter_card_id .email { font-size: 18px; line-height: 1.33; margin-top: 10px; }
+
+.reporter_card_info { padding-top: 15px; margin-top: 20px; border-top: 1px solid #ccc; }
+
+.reporter_card_info .desc { font-size: 13px; line-height: 1.38; letter-spacing: -0.13px; }
+
+.reporter_card_info .period { font-size: 12px; line-height: 1.42; letter-spacing: -0.12px; margin-top: 5px; color: #999; }
+
+.reporter_card_info .benefit { margin-top: 20px; font-size: 12px; font-weight: 500; line-height: 1.42; letter-spacing: -0.12px; color: #212121; }
+
+.reporter_card .add_img_set { margin-top: 20px; }
+
+.reporter_card .add_img_set p { margin-top: 10px; font-size: 14px; line-height: 20px; }
+
+.reporter_card .add_img_set p span { display: inline-block; font-size: 12px; }

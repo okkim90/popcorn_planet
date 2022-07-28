@@ -10,10 +10,12 @@
     <link rel="stylesheet" href="./common/css/pp_common.css">
 </head>
 <body>
-    <!-- 회원가입 팝업 -->
+
+
     <!-- [DEV]
         활성화 'on' class
     -->
+    <!-- 회원가입 팝업 -->
     <div class="pp_popup on">
         <div class="pp_popup_inner">
             <div class="pp_popup_cont taC">
@@ -31,9 +33,6 @@
     <!--// 회원가입 팝업 -->
 
     <!-- 회원정보 추가 팝업 -->
-    <!-- [DEV]
-        활성화 'on' class
-    -->
     <div class="pp_popup on">
         <div class="pp_popup_inner">
             <div class="pp_popup_cont taC">
@@ -50,5 +49,37 @@
         </div>
     </div>
     <!-- // 회원정보 추가 팝업 -->
+
+    <!-- 기자단증 팝업 -->
+    <div class="pp_popup on popup_reporter">
+        <div class="pp_popup_inner">
+            <div class="pp_popup_cont taC">
+                <button class="pp_popup_close" onclick="this.closest('.pp_popup').classList.remove('on')"><span class="blind">팝업닫기</span></button>
+                <div class="reporter_card_wrap">
+                    <div class="reporter_card taC">
+                        <div class="reporter_card_logo">
+                            <img src="./images/reporter/logo_reporter.svg" alt="어린이과학동아&amp;어린이수학동아 기자단">
+                        </div>
+                        <div class="reporter_card_thumb_area">
+                            <div class="reporter_card_thumb">
+                                <div class="img_box">
+                                    <img src="./images/reporter/thumb.jpg" alt="" >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reporter_card_id">
+                            <strong class="name ff_godoB">장원영</strong>
+                            <span class="logo"><img src="./images/reporter/logo_ds.svg" alt=""></span>
+                        </div>
+                        <div class="reporter_card_info">
+                            <p class="desc">위 사람은 어린이과학동아 기자단임을 증명함</p>
+                            <p class="period">유효기간 : 2022.01.15~2022.12.31</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--// 기자단증 팝업 -->
 </body>
 </html>
