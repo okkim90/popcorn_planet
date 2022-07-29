@@ -29,36 +29,44 @@
         &1 {
             background-image: url(../../images/main/main_bg1.png);
             .link01 {
-                position: absolute;
-                width: 35%;
-                right: 10%;
-                bottom: 6%;
                 .lottie_player {
                     width: 100%;
                     height: auto;
                 }
             }
+
+            .link01_wrap {
+                width: 386px;
+                height: 331px;
+                transform: translate(661px, 340px);
+            }
+
+            .main_story_list_wrap {
+                width: 328px;
+                height: 300px;
+                transform: translate(457px, 101px);
+            }
             .main_story_list {
-                position: absolute;
+                //position: absolute;
                 display: flex;
-                width: 30%;
-                left: 38.6%;
-                top: 13%;
+                //width: 30%;
+                //left: 38.6%;
+                //top: 13%;
                 text-align: left;
 
                 &_item {
                     width: 50%;
                     box-sizing: border-box;
                     &:nth-child(odd) {
-                        padding-right: 5.4%;
+                        padding-right: 30px;
                     }
                     &:nth-child(even) {
-                        padding-left: 5.4%;
+                        padding-left: 30px;
                     }
                 }
                 &_link {
                     display: block;
-                    padding: 10%;
+                    padding-top: 5px;
                 }
                 .tit {
                     display: block;

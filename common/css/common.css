@@ -16,19 +16,21 @@
 
 .con_list_item1 { background-image: url(../../images/main/main_bg1.png); }
 
-.con_list_item1 .link01 { position: absolute; width: 35%; right: 10%; bottom: 6%; }
-
 .con_list_item1 .link01 .lottie_player { width: 100%; height: auto; }
 
-.con_list_item1 .main_story_list { position: absolute; display: -webkit-box; display: -ms-flexbox; display: flex; width: 30%; left: 38.6%; top: 13%; text-align: left; }
+.con_list_item1 .link01_wrap { width: 386px; height: 331px; -webkit-transform: translate(661px, 340px); transform: translate(661px, 340px); }
+
+.con_list_item1 .main_story_list_wrap { width: 328px; height: 300px; -webkit-transform: translate(457px, 101px); transform: translate(457px, 101px); }
+
+.con_list_item1 .main_story_list { display: -webkit-box; display: -ms-flexbox; display: flex; text-align: left; }
 
 .con_list_item1 .main_story_list_item { width: 50%; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-.con_list_item1 .main_story_list_item:nth-child(odd) { padding-right: 5.4%; }
+.con_list_item1 .main_story_list_item:nth-child(odd) { padding-right: 30px; }
 
-.con_list_item1 .main_story_list_item:nth-child(even) { padding-left: 5.4%; }
+.con_list_item1 .main_story_list_item:nth-child(even) { padding-left: 30px; }
 
-.con_list_item1 .main_story_list_link { display: block; padding: 10%; }
+.con_list_item1 .main_story_list_link { display: block; padding-top: 5px; }
 
 .con_list_item1 .main_story_list .tit { display: block; font-size: 14px; font-weight: 500; margin-top: 4px; line-height: 1.2; }
 
