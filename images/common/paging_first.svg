@@ -1,6 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10">
-  <g id="Icon_ionic-ios-arrow-forward-forward" data-name="Icon ionic-ios-arrow-forward-forward" transform="translate(12 10) rotate(180)">
-    <path id="Icon_ionic-ios-arrow-forward" data-name="Icon ionic-ios-arrow-forward" d="M15.438,11.194,11.467,7.413a.688.688,0,0,1,0-1.009.783.783,0,0,1,1.062,0l4.5,4.284a.689.689,0,0,1,.022.985l-4.518,4.314a.781.781,0,0,1-1.062,0,.688.688,0,0,1,0-1.009Z" transform="translate(-11.246 -6.196)" fill="#424242"/>
-    <path id="Icon_ionic-ios-arrow-forward-2" data-name="Icon ionic-ios-arrow-forward" d="M15.438,11.194,11.467,7.413a.688.688,0,0,1,0-1.009.783.783,0,0,1,1.062,0l4.5,4.284a.689.689,0,0,1,.022.985l-4.518,4.314a.781.781,0,0,1-1.062,0,.688.688,0,0,1,0-1.009Z" transform="translate(-5.246 -6.196)" fill="#424242"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="12" height="10"><g data-name="Icon ionic-ios-arrow-forward-forward" fill="#424242"><path data-name="Icon ionic-ios-arrow-forward" d="m7.808 5.002 3.971 3.781a.688.688 0 0 1 0 1.009.783.783 0 0 1-1.062 0l-4.5-4.284a.689.689 0 0 1-.022-.985L10.713.209a.781.781 0 0 1 1.062 0 .688.688 0 0 1 0 1.009Z"/><path data-name="Icon ionic-ios-arrow-forward" d="m1.808 5.002 3.971 3.781a.688.688 0 0 1 0 1.009.783.783 0 0 1-1.062 0l-4.5-4.284a.689.689 0 0 1-.022-.985L4.713.209a.781.781 0 0 1 1.062 0 .688.688 0 0 1 0 1.009Z"/></g></svg>

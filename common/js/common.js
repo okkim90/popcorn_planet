@@ -151,7 +151,11 @@ $(function(){
 
     });
 
-
+    if(isMobile()){
+        $('#tab_bar').css({'display':'block'});
+    }else{
+        $('#tab_bar').css({'display':'none'});
+    }
 
 });
 
@@ -242,157 +246,77 @@ function addComma(value){
     return value;
 }
 
+// Hide Header on on scroll down
+let didScroll = false;
+let lastScrollTop;
+let delta = 5;
+let navbarHeight = $('.header').outerHeight();
 
 
 
-// 토론결과
-function discussionResult(){
-    if(document.querySelector('.vp_discussion_result')){
-        let val_agree = parseInt(document.getElementById('agree_val').value);
-        let val_disagree = parseInt(document.getElementById('disagree_val').value);
-        let val_total = val_agree + val_disagree;
-        let percent_agree = (val_agree*100)/val_total;
-        let percent_disagree = (val_disagree*100)/val_total;
 
-        let $bar_agree = document.getElementById('agree_progress');
-        let $bar_disagree = document.getElementById('disagree_progress');
-        let $percent_agree = document.getElementById('agree_percent');
-        let $percent_disagree = document.getElementById('disagree_percent');
-        let $count_agree = document.getElementById('agree_count');
-        let $count_disagree = document.getElementById('disagree_count');
-
-        $bar_agree.style.width = percent_agree+'%';
-        $bar_disagree.style.width = percent_disagree+'%';
-
-        $percent_agree.textContent = Math.round(percent_agree)+"%";
-        $percent_disagree.textContent = Math.round(percent_disagree)+"%";
-
-        $count_agree.textContent = addComma(String(val_agree))+" 명";
-        $count_disagree.textContent = addComma(String(val_disagree))+" 명";
-    }
-}
-
-
-
-/* 메인페이지 상단 리스트 스와이프 */
-var mySwiper1 = undefined;
-function initSwiper1(target) {
-    let $this = $(target);
-    let screenWidth = window.innerWidth;
-    if($this.length > 0 ){
-        if( screenWidth <= 767 && mySwiper1 == undefined) {
-            mySwiper1 = new Swiper(target, {
-                slidesPerView: 1,
-                speed: 600,
-                loop: true,
-                autoplay: {
-                    delay: 4500,
-                    disableOnInteraction: false,
-                },
-            });
-        } else if (screenWidth > 767 && mySwiper1 != undefined) {
-            mySwiper1.destroy();
-            mySwiper1 = undefined;
-            $this.find('.swiper-wrapper').removeAttr('style');
-            $this.find('.swiper-slide').removeAttr('style');
-
-        }
-    }
-}
-
-$(window).on('load resize', function(){
-
-    initSwiper1('.card_list');
-
-
+$(window).scroll(function(event){
+    //$('#header').addClass('scrolled');
+    didScroll = true;
 });
-/* // 메인페이지 상단 리스트 스와이프 */
 
 
-
-
-/* 메인페이지 파이차트 생성 + 결과 노출 스크립트 */
-function createChart() {
-    var colorArr = [],
-        pieData = [],
-        sectorAngleArr = [],
-        percentArr = [],
-        txtArr = [],
-        svg = '<svg class="pie_svg" viewBox="0 0 400 400">',
-        total = 0,
-        startAngle = 0,
-        endAngle = 0,
-        x1 = 0,
-        x2 = 0,
-        y1 = 0,
-        y2 = 0,
-        percent = 0;
-        result = '';
-
-    // Get values of input boxes and store in pieData array
-    $('.input-container input').each(function(){
-        var value = parseInt($(this).val()); // make sure value is saved as an int
-        pieData.push(value);
-        total += value; // Adds all numbers to get the sum of all inputs
-
-        var $color = $(this).data('color');
-        colorArr.push($color);
-        var $txt = $(this).data('txt');
-        txtArr.push($txt);
-    });
-
-    // Get angles each slice swipes for sectorAngleArr
-    for (var i = 0; i < pieData.length; i++) {
-        var percentArr_item = Math.round(pieData[i] * 100 / total);
-        percentArr.push(percentArr_item + "%" );
-
-        var angle = Math.ceil(360 * pieData[i] / total);
-        sectorAngleArr.push(angle);
+setInterval(function() {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
     }
+}, 0);
 
-    for (var i = 0; i < percentArr.length; i++) {
-        //document.querySelectorAll('.result_percent')[i].textContent  = percentArr[i];
-        //var main_discussion_result =  document.querySelector('.main_discussion_result');
-        var item = '<span class="main_discussion_result_item">'+
-                        '<i style="background:'+ colorArr[i] +'"></i>'+
-                        '<b class="result_percent" style="color:'+ colorArr[i] +'">'+percentArr[i]+'</b>'+
-                        '<span>'+txtArr[i]+'</span>'+
-                    '</span>';
-        result += item;
-    }
+function hasScrolled() {
+    var st = $(this).scrollTop();
+    var tab_bar = $('#tab_bar');
+    var tab_bar_h = tab_bar.outerHeight();
+    if(Math.abs(lastScrollTop - st) <= delta)
+        return;
+    if (st > lastScrollTop && st > navbarHeight){
 
-    for (var i = 0; i < sectorAngleArr.length; i++) {
-        startAngle = endAngle;
-        endAngle = startAngle + sectorAngleArr[i];
+        $('#header, .tab_bar').removeClass('nav-up').addClass('nav-down');
+        /*
+        if((st + vh) > ($('#footer').offset().top + $('.tab_bar ').outerHeight())){
+            $('.tab_bar').addClass('nav-up').removeClass('nav-down');
+        }else{
+            $('.tab_bar').removeClass('nav-up').addClass('nav-down');
+        }
+        */
 
-        // Check if the angle is over 180deg for large angle flag
-        percent = endAngle - startAngle;
+        if($('#tab_bar').length > 0){
+            if($('#tab_bar').offset().top > ($('#footer').offset().top + tab_bar_h) ){
+                $('#tab_bar').addClass('visible');
+            }else{
 
-
-        var overHalf = 0;
-        if (percent > 180) {
-        overHalf = 1;
+               //tab_bar.removeClass('visible');
+            }
         }
 
-        // Super fun math for calculating x and y positions
-        x1 = 200 + 200 * Math.cos(Math.PI * startAngle / 180);
-        y1 = 200 + 200 * Math.sin(Math.PI * startAngle / 180);
+    } else {
+        if(st + $(window).height() < $(document).height()) {
+            $('#header, .tab_bar').removeClass('nav-down').addClass('nav-up');
+            $('#tab_bar').removeClass('visible');
 
-        x2 = 200 + 200 * Math.cos(Math.PI * endAngle / 180);
-        y2 = 200 + 200 * Math.sin(Math.PI * endAngle / 180);
-
-        var d = "M200,200  L" + x1 + "," + y1 + "  A200,200 0 " + overHalf + ",1 " + x2 + "," + y2 + " z";
-        svg += '<path  d="' + d + '" style="fill: ' + colorArr[i] + ';" />';
+        }
     }
-
-    // Close SVG
-    svg += '</svg>';
-
-    // Write html for SVG to the DOM
-    $('#pie-chart').html(svg);
-
-    $('.main_discussion_result').html(result);
+    lastScrollTop = st;
 }
+
+
+
+function isMobile(){
+	var UserAgent = navigator.userAgent;
+	if (UserAgent.match(/iPhone|iPod|Android|Windows CE|BlackBerry|Symbian|Windows Phone|webOS|Opera Mini|Opera Mobi|POLARIS|IEMobile|lgtelecom|nokia|SonyEricsson/i) != null || UserAgent.match(/LG|SAMSUNG|Samsung/) != null)
+	{
+		return true;
+	}else{
+		return false;
+	}
+}
+
+
 
 
 

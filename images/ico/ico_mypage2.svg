@@ -1,10 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
-    <defs>
-        <clipPath id="88mgy5joxa">
-            <rect data-name="사각형 1661" width="40" height="40" rx="20" style="fill:#fff"/>
-        </clipPath>
-    </defs>
-    <g style="clip-path:url(#88mgy5joxa)">
-        <path d="M0 36.667v-.334a19.667 19.667 0 1 1 39.334 0v.334zm13-30a6.667 6.667 0 1 1 6.665 6.667A6.667 6.667 0 0 1 13 6.666z" transform="translate(.333 6.667)" style="fill:#fef8d9;stroke:#fae1a4;stroke-width:2px" data-name="사람 라인"/>
-    </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><defs><clipPath id="a"><rect data-name="사각형 1661" width="40" height="40" rx="20" style="fill:#fff"/></clipPath></defs><g style="clip-path:url(#a)"><path d="M0 36.667v-.334a19.667 19.667 0 1 1 39.334 0v.334zm13-30a6.667 6.667 0 1 1 6.665 6.667A6.667 6.667 0 0 1 13 6.666z" transform="translate(.333 6.667)" style="fill:#fef8d9;stroke:#fae1a4;stroke-width:2px" data-name="사람 라인"/></g></svg>

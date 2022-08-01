@@ -1,0 +1,92 @@
+.tab_bar {
+    display: none;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 9999;
+    box-shadow: 0 -3px 6px 0 rgba(0, 0, 0, 0.07);
+    transition: bottom .3s ease-in-out;
+
+    &.nav-down {
+        bottom: -80px;
+        &.visible {
+            bottom: 0;
+        }
+    }
+    &.nav-up {
+        bottom: 0;
+    }
+
+
+    &_list {
+        display: flex;
+        padding: 0 10px;
+    }
+    &_item {
+        flex: 1;
+        &.ty_storycon {
+            order: 0;
+        }
+        &.ty_presscon {
+            order: 1;
+        }
+        &.ty_home {
+            order: 2;
+        }
+        &.ty_playcon {
+            order: 3;
+        }
+        &.ty_citizencon {
+            order: 4;
+        }
+
+
+        &.ty_home {
+            margin: 0 10px;
+            text-align: center;
+            .tab_bar_link {
+                margin: 0 auto;
+                margin-top: -14px;
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                background-color: $c_key;
+            }
+        }
+    }
+    &_link {
+        display: flex;
+        height: 56px;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        .txt {
+            font-size: 10px;
+            line-height: 1.5;
+        }
+        .ico {
+            width: 29px;
+            height: 29px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: rotate(45deg);
+            transform-origin: center center;
+            @at-root .ty_playcon & {
+                transform: rotate(0);
+            }
+            @at-root .ty_home & {
+                transform: rotate(0);
+            }
+            @at-root .ty_citizencon & {
+                transform: rotate(-45deg);
+            }
+
+        }
+    }
+
+}
+
+

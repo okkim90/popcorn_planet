@@ -976,6 +976,44 @@
   .alert_setting_item .tit { font-size: 15px; }
   .alert_setting_item .txt { font-size: 12px; } }
 
+.tab_bar { display: none; position: fixed; width: 100%; left: 0; bottom: 0; background-color: #fff; z-index: 9999; -webkit-box-shadow: 0 -3px 6px 0 rgba(0, 0, 0, 0.07); box-shadow: 0 -3px 6px 0 rgba(0, 0, 0, 0.07); -webkit-transition: bottom .3s ease-in-out; transition: bottom .3s ease-in-out; }
+
+.tab_bar.nav-down { bottom: -80px; }
+
+.tab_bar.nav-down.visible { bottom: 0; }
+
+.tab_bar.nav-up { bottom: 0; }
+
+.tab_bar_list { display: -webkit-box; display: -ms-flexbox; display: flex; padding: 0 10px; }
+
+.tab_bar_item { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; }
+
+.tab_bar_item.ty_storycon { -webkit-box-ordinal-group: 1; -ms-flex-order: 0; order: 0; }
+
+.tab_bar_item.ty_presscon { -webkit-box-ordinal-group: 2; -ms-flex-order: 1; order: 1; }
+
+.tab_bar_item.ty_home { -webkit-box-ordinal-group: 3; -ms-flex-order: 2; order: 2; }
+
+.tab_bar_item.ty_playcon { -webkit-box-ordinal-group: 4; -ms-flex-order: 3; order: 3; }
+
+.tab_bar_item.ty_citizencon { -webkit-box-ordinal-group: 5; -ms-flex-order: 4; order: 4; }
+
+.tab_bar_item.ty_home { margin: 0 10px; text-align: center; }
+
+.tab_bar_item.ty_home .tab_bar_link { margin: 0 auto; margin-top: -14px; width: 60px; height: 60px; border-radius: 50%; background-color: #f6c34b; }
+
+.tab_bar_link { display: -webkit-box; display: -ms-flexbox; display: flex; height: 56px; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-flow: column; flex-flow: column; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+
+.tab_bar_link .txt { font-size: 10px; line-height: 1.5; }
+
+.tab_bar_link .ico { width: 29px; height: 29px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-transform: rotate(45deg); transform: rotate(45deg); -webkit-transform-origin: center center; transform-origin: center center; }
+
+.ty_playcon .tab_bar_link .ico { -webkit-transform: rotate(0); transform: rotate(0); }
+
+.ty_home .tab_bar_link .ico { -webkit-transform: rotate(0); transform: rotate(0); }
+
+.ty_citizencon .tab_bar_link .ico { -webkit-transform: rotate(-45deg); transform: rotate(-45deg); }
+
 .fc_key { color: #f6c34b; }
 
 .fc_key2 { color: #fae1a4; }
