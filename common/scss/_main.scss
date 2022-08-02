@@ -5,6 +5,20 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        .lottie_box {
+            .lottie_player {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            top: 100%;
+        }
         .svg_box {
             max-width: 100%;
             width: 1160px;
@@ -27,7 +41,13 @@
         }
         background-repeat: repeat-x;background-position: center center;
         &1 {
-            background-image: url(../../images/main/main_bg1.png);
+            &::before {
+                background-color: #8780bc;
+            }
+
+
+            //background-image: url(../../images/main/main_bg1.png);
+            background-color: #8780bc;
             .link01 {
                 .lottie_player {
                     width: 100%;
@@ -36,15 +56,15 @@
             }
 
             .link01_wrap {
-                width: 386px;
-                height: 331px;
-                transform: translate(661px, 340px);
+                width: 400px;
+                height: 340px;
+                transform: translate(630px, 340px);;
             }
 
             .main_story_list_wrap {
-                width: 328px;
+                width: 320px;
                 height: 300px;
-                transform: translate(457px, 101px);
+                transform: translate(431px, 119px);
             }
             .main_story_list {
                 //position: absolute;
@@ -58,10 +78,10 @@
                     width: 50%;
                     box-sizing: border-box;
                     &:nth-child(odd) {
-                        padding-right: 30px;
+                        padding-right: 32px;
                     }
                     &:nth-child(even) {
-                        padding-left: 30px;
+                        padding-left: 32px;
                     }
                 }
                 &_link {
@@ -87,22 +107,30 @@
             }
         }
         &2 {
-            background-image: url(../../images/main/main_bg2.png);
-            .lottie_player {
-                position: absolute;
-                width: 31%;
-                left: 5%;
-                bottom: 29%;
-                height: auto;
+            &::before {
+                background-color: #ee869d;
             }
+            background-color: #ee869d;
+            //background-image: url(../../images/main/main_bg2.png);
+
             .img_item {
                 position: absolute;
                 width: 15.8%;
                 left: 22.5%;
                 bottom: 6.5%;
             }
+            .lottie_box {
+                width: 376px;
+                height: 391px;
+                transform : translate(124px, 174px);
+                .lottie_player {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
             .discussion_wrap {
-                transform :translate(925px, 470px);
+                transform : translate(885px, 494px);
             }
             .discussion_box {
                 &_tit {
@@ -143,14 +171,135 @@
             }
         }
         &3 {
-            background-image: url(../../images/main/main_bg3.png);
+            &::before {
+                background-color: #55c1dd;
+            }
+            background-color: #55c1dd;
+            //background-image: url(../../images/main/main_bg3.png);
+
+            .lottie_box {
+                width: 370px;
+                height: 391px;
+                transform : translate(701px, 358px);
+                .lottie_player {
+                    width: 100%;
+                    height: auto;
+                }
+            }
         }
         &4 {
-            background-image: url(../../images/main/main_bg4.png);
+           &::before {
+            background-color: #73b77e;
+           }
+           background-color: #73b77e;
+            //background-image: url(../../images/main/main_bg4.png);
+
+            .lottie_box1 {
+                width: 360px;
+                height: 360px;
+                transform : translate(41px, 149px);
+            }
+            .lottie_box2 {
+                width: 360px;
+                height: 360px;
+                transform : translate(335px, 149px);
+            }
         }
     }
 
 }
+
+.main_wrap {
+    overflow: hidden;
+}
+
+.main_bot {
+    padding-bottom: 160px;
+    position: relative;
+    z-index: 10;
+}
+.main_board {
+    display: flex;
+    &_sec {
+        width: 50%;
+        flex: 1;
+        box-sizing: border-box;
+    }
+    &_notice {
+        padding-right: 20px;
+    }
+    &_community {
+        padding-left: 20px;
+    }
+
+    &_inner {
+        background-color: #fff;
+        border-radius: 12px;
+        border: 3px solid #000;
+        padding: 20px;
+    }
+    .tit_area {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 10px;
+        .tit {
+            font-size: 22px;
+            line-height: 1.18;
+            letter-spacing: -0.22px;
+            color: #212121;
+        }
+        .btn_vm {
+            font-size: 13px;
+            line-height: 1.4;
+            position: relative;
+            padding-left: 14px;
+            &::before {
+                content: '';
+                position: absolute;
+                width: 9px;
+                height: 1px;
+                background-color: #424242;
+                left: 0;
+                top: 50%;
+                margin-top: -0.5px;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                width: 1px;
+                height: 9px;
+                background-color: #424242;
+                left: 4px;
+                top: 50%;
+                margin-top: -4.5px;
+            }
+        }
+    }
+    .main_list {
+        li {
+            & + li {
+                margin-top: 5px;
+            }
+            a {
+                padding-left: 10px;
+                position: relative;
+                display: block;
+                font-size: 14px;
+                line-height: 20px;
+                color: #666;
+                &::before {
+                    content: '·';
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                }
+            }
+        }
+    }
+}
+
+
 
 
 @media (max-width: 1920px) {
