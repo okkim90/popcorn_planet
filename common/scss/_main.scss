@@ -1,6 +1,17 @@
+
+.main {
+    .header {
+        background-color: transparent;
+        border-bottom: none;
+        .btn_nav .bar_box .bar {
+            background-color: $c_key;
+        }
+    }
+}
+
 .con_list {
     &_item {
-        padding: 60px 0 59px;
+        padding: 100px 0;
         text-align: center;
         display: flex;
         align-items: center;
@@ -39,32 +50,26 @@
         svg {
             max-width: 100%;
         }
-        background-repeat: repeat-x;background-position: center center;
+        background-repeat: repeat-x;
+        background-position: center center;
+
         &1 {
             &::before {
                 background-color: #8780bc;
             }
 
 
-            //background-image: url(../../images/main/main_bg1.png);
+            background-image: url(../../images/main/BG_story.jpg);
             background-color: #8780bc;
-            .link01 {
-                .lottie_player {
-                    width: 100%;
-                    height: auto;
-                }
-            }
-
-            .link01_wrap {
-                width: 400px;
-                height: 340px;
-                transform: translate(630px, 340px);;
+            .lottie_box {
+                position: absolute;
+                width: 34%;
+                left: 55%;
+                bottom: 8%;
             }
 
             .main_story_list_wrap {
-                width: 320px;
-                height: 300px;
-                transform: translate(431px, 119px);
+                //transform: translate(431px, 119px);
             }
             .main_story_list {
                 //position: absolute;
@@ -84,10 +89,23 @@
                         padding-left: 32px;
                     }
                 }
+
+
                 &_link {
                     display: block;
                     padding-top: 5px;
                 }
+                .sc_thumb {
+                    padding-top: 0;
+                    position: static;
+                    &_img {
+                        position: static;
+                        width: 128px;
+                        height: 128px;
+                    }
+                }
+
+
                 .tit {
                     display: block;
                     font-size: 14px;
@@ -99,10 +117,9 @@
                     margin-top: 4px;
                 }
                 .sc_tag {
-                    position: absolute;
-                    left: 0;
-                    top: -5px;
-                    z-index: 10;
+                    display: block;
+                    transform: translateY(9px);
+                    margin-top: -13px;
                 }
             }
         }
@@ -111,7 +128,7 @@
                 background-color: #ee869d;
             }
             background-color: #ee869d;
-            //background-image: url(../../images/main/main_bg2.png);
+            background-image: url(../../images/main/BG_press.jpg);
 
             .img_item {
                 position: absolute;
@@ -120,19 +137,100 @@
                 bottom: 6.5%;
             }
             .lottie_box {
-                width: 376px;
-                height: 391px;
-                transform : translate(124px, 174px);
-                .lottie_player {
-                    width: 100%;
-                    height: auto;
+                position: absolute;
+                width: 32%;
+                left: 11%;
+                top: 20%;
+            }
+
+            .main_id_card {
+                transform: translate(543px, 75px);
+            }
+
+            .reporter_card {
+                &_logo {
+                    img {
+                        height: 50px;
+                    }
+                    margin-bottom: 6px;
+                }
+                &_thumb {
+                    padding-top: 0;
+                    position: static;
+                    .img_box {
+                        position: static;
+                        margin: 0 auto;
+                        width: 140px;
+                        height: 140px;
+                    }
+                    &::before {
+                        display: none;
+                    }
+                }
+                &_id {
+                    margin-top: 10px;
+                    .name {
+                        font-size: 26px;
+                        line-height: 1.1;
+                    }
+                    .logo {
+                        margin-top: 6px;
+                        img {
+                            height: 18px;
+                        }
+                    }
                 }
             }
 
+            .svg_cont3 {
+                position: absolute;
+                width: 19%;
+                left: 12.5%;
+                top: 48.5%;
+            }
+
+
+
+
+            .press_set {
+                display: block;
+                color: #fff;
+                text-align: left;
+                &_tit {
+                    display: block;
+                    font-size: 19px;
+                    font-weight: 500;
+                    font-family: 'Godo';
+                    line-height: 1.2;
+                }
+                &_cont {
+                    font-size: 14px;
+                    line-height: 1.4;
+                    margin-top: 2px;
+                }
+                .writer_set {
+                    margin-top: 6px;
+                    .level {
+                        margin-left: 0;
+                        position: static;
+                        border-radius: 3px;
+                        &_arrow {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .svg_cont2 {
+                position: absolute;
+                width: 55%;
+                right: 10%;
+                bottom: 5%;
+            }
             .discussion_wrap {
-                transform : translate(885px, 494px);
+                transform : translate(477px, 131px);
             }
             .discussion_box {
+                display: block;
                 &_tit {
                     font-size: 22px;
                     line-height: 1;
@@ -175,7 +273,7 @@
                 background-color: #55c1dd;
             }
             background-color: #55c1dd;
-            //background-image: url(../../images/main/main_bg3.png);
+            background-image: url(../../images/main/BG_play.jpg);
 
             .lottie_box {
                 width: 370px;
@@ -192,7 +290,7 @@
             background-color: #73b77e;
            }
            background-color: #73b77e;
-            //background-image: url(../../images/main/main_bg4.png);
+            background-image: url(../../images/main/BG_earth.jpg);
 
             .lottie_box1 {
                 width: 360px;
@@ -214,6 +312,7 @@
 }
 
 .main_bot {
+    margin-top: -70px;
     padding-bottom: 160px;
     position: relative;
     z-index: 10;
@@ -307,6 +406,8 @@
         background-size: cover;
     }
 }
+
+
 
 @media (max-width: 1024px) {
 

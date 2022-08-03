@@ -4,7 +4,11 @@
 @import url(swiper-bundle.min.css);
 @import url(jquery-ui.min.css);
 /* 컬러 */
-.con_list_item { padding: 60px 0 59px; text-align: center; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; background-repeat: repeat-x; background-position: center center; }
+.main .header { background-color: transparent; border-bottom: none; }
+
+.main .header .btn_nav .bar_box .bar { background-color: #f6c34b; }
+
+.con_list_item { padding: 100px 0; text-align: center; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; background-repeat: repeat-x; background-position: center center; }
 
 .con_list_item .lottie_box .lottie_player { width: 100%; height: auto; }
 
@@ -18,15 +22,11 @@
 
 .con_list_item svg { max-width: 100%; }
 
-.con_list_item1 { background-color: #8780bc; }
+.con_list_item1 { background-image: url(../../images/main/BG_story.jpg); background-color: #8780bc; }
 
 .con_list_item1::before { background-color: #8780bc; }
 
-.con_list_item1 .link01 .lottie_player { width: 100%; height: auto; }
-
-.con_list_item1 .link01_wrap { width: 400px; height: 340px; -webkit-transform: translate(630px, 340px); transform: translate(630px, 340px); }
-
-.con_list_item1 .main_story_list_wrap { width: 320px; height: 300px; -webkit-transform: translate(431px, 119px); transform: translate(431px, 119px); }
+.con_list_item1 .lottie_box { position: absolute; width: 34%; left: 55%; bottom: 8%; }
 
 .con_list_item1 .main_story_list { display: -webkit-box; display: -ms-flexbox; display: flex; text-align: left; }
 
@@ -38,23 +38,63 @@
 
 .con_list_item1 .main_story_list_link { display: block; padding-top: 5px; }
 
+.con_list_item1 .main_story_list .sc_thumb { padding-top: 0; position: static; }
+
+.con_list_item1 .main_story_list .sc_thumb_img { position: static; width: 128px; height: 128px; }
+
 .con_list_item1 .main_story_list .tit { display: block; font-size: 14px; font-weight: 500; margin-top: 4px; line-height: 1.2; }
 
 .con_list_item1 .main_story_list .writer_set { margin-top: 4px; }
 
-.con_list_item1 .main_story_list .sc_tag { position: absolute; left: 0; top: -5px; z-index: 10; }
+.con_list_item1 .main_story_list .sc_tag { display: block; -webkit-transform: translateY(9px); transform: translateY(9px); margin-top: -13px; }
 
-.con_list_item2 { background-color: #ee869d; }
+.con_list_item2 { background-color: #ee869d; background-image: url(../../images/main/BG_press.jpg); }
 
 .con_list_item2::before { background-color: #ee869d; }
 
 .con_list_item2 .img_item { position: absolute; width: 15.8%; left: 22.5%; bottom: 6.5%; }
 
-.con_list_item2 .lottie_box { width: 376px; height: 391px; -webkit-transform: translate(124px, 174px); transform: translate(124px, 174px); }
+.con_list_item2 .lottie_box { position: absolute; width: 32%; left: 11%; top: 20%; }
 
-.con_list_item2 .lottie_box .lottie_player { width: 100%; height: auto; }
+.con_list_item2 .main_id_card { -webkit-transform: translate(543px, 75px); transform: translate(543px, 75px); }
 
-.con_list_item2 .discussion_wrap { -webkit-transform: translate(885px, 494px); transform: translate(885px, 494px); }
+.con_list_item2 .reporter_card_logo { margin-bottom: 6px; }
+
+.con_list_item2 .reporter_card_logo img { height: 50px; }
+
+.con_list_item2 .reporter_card_thumb { padding-top: 0; position: static; }
+
+.con_list_item2 .reporter_card_thumb .img_box { position: static; margin: 0 auto; width: 140px; height: 140px; }
+
+.con_list_item2 .reporter_card_thumb::before { display: none; }
+
+.con_list_item2 .reporter_card_id { margin-top: 10px; }
+
+.con_list_item2 .reporter_card_id .name { font-size: 26px; line-height: 1.1; }
+
+.con_list_item2 .reporter_card_id .logo { margin-top: 6px; }
+
+.con_list_item2 .reporter_card_id .logo img { height: 18px; }
+
+.con_list_item2 .svg_cont3 { position: absolute; width: 19%; left: 12.5%; top: 48.5%; }
+
+.con_list_item2 .press_set { display: block; color: #fff; text-align: left; }
+
+.con_list_item2 .press_set_tit { display: block; font-size: 19px; font-weight: 500; font-family: 'Godo'; line-height: 1.2; }
+
+.con_list_item2 .press_set_cont { font-size: 14px; line-height: 1.4; margin-top: 2px; }
+
+.con_list_item2 .press_set .writer_set { margin-top: 6px; }
+
+.con_list_item2 .press_set .writer_set .level { margin-left: 0; position: static; border-radius: 3px; }
+
+.con_list_item2 .press_set .writer_set .level_arrow { display: none; }
+
+.con_list_item2 .svg_cont2 { position: absolute; width: 55%; right: 10%; bottom: 5%; }
+
+.con_list_item2 .discussion_wrap { -webkit-transform: translate(477px, 131px); transform: translate(477px, 131px); }
+
+.con_list_item2 .discussion_box { display: block; }
 
 .con_list_item2 .discussion_box_tit { font-size: 22px; line-height: 1; font-family: 'Godo'; font-weight: bold; }
 
@@ -70,7 +110,7 @@
 
 .con_list_item2 .discussion_box_result_item span { font-weight: 500; }
 
-.con_list_item3 { background-color: #55c1dd; }
+.con_list_item3 { background-color: #55c1dd; background-image: url(../../images/main/BG_play.jpg); }
 
 .con_list_item3::before { background-color: #55c1dd; }
 
@@ -78,7 +118,7 @@
 
 .con_list_item3 .lottie_box .lottie_player { width: 100%; height: auto; }
 
-.con_list_item4 { background-color: #73b77e; }
+.con_list_item4 { background-color: #73b77e; background-image: url(../../images/main/BG_earth.jpg); }
 
 .con_list_item4::before { background-color: #73b77e; }
 
@@ -88,7 +128,7 @@
 
 .main_wrap { overflow: hidden; }
 
-.main_bot { padding-bottom: 160px; position: relative; z-index: 10; }
+.main_bot { margin-top: -70px; padding-bottom: 160px; position: relative; z-index: 10; }
 
 .main_board { display: -webkit-box; display: -ms-flexbox; display: flex; }
 
@@ -1111,8 +1151,6 @@
 #content { overflow: hidden; }
 
 #content.ty_sub { padding-top: 181px; }
-
-#container.main { padding-top: 100px; }
 
 #container.sub { padding-top: 100px; min-height: calc(100vh - 310px); background-color: #fef7e8; padding-bottom: 80px; }
 
