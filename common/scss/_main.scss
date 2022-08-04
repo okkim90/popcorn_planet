@@ -53,6 +53,26 @@
         background-repeat: repeat-x;
         background-position: center center;
 
+        .con_link {
+            &.ty_ani {
+
+                transform-origin: center center;
+            }
+        }
+
+        @keyframes link_ani {
+            0% { -webkit-transform: rotate(0); transform: rotate(0); }
+            5% { -webkit-transform: rotate(4deg); transform: rotate(4deg); }
+            10% { -webkit-transform: rotate(0); transform: rotate(0); }
+            15% { -webkit-transform: rotate(-4deg); transform: rotate(-4deg); }
+            20% { -webkit-transform: rotate(0); transform: rotate(0); }
+            75% { -webkit-transform: rotate(0); transform: rotate(0); }
+            85% { -webkit-transform: rotate(4deg); transform: rotate(4deg); }
+            90% { -webkit-transform: rotate(0); transform: rotate(0); }
+            95% { -webkit-transform: rotate(-4deg); transform: rotate(-4deg); }
+            100% { -webkit-transform: rotate(0); transform: rotate(0); }
+        }
+
         &1 {
             &::before {
                 background-color: #8780bc;
@@ -141,6 +161,13 @@
                 width: 32%;
                 left: 11%;
                 top: 20%;
+                .lottie_link {
+                    position: absolute;
+                    width: 90%;
+                    height: 49%;
+                    left: 0;
+                    top: 0;
+                }
             }
 
             .main_id_card {
@@ -184,7 +211,7 @@
 
             .svg_cont3 {
                 position: absolute;
-                width: 19%;
+                width: 18.4%;
                 left: 12.5%;
                 top: 48.5%;
             }
@@ -275,14 +302,28 @@
             background-color: #55c1dd;
             background-image: url(../../images/main/BG_play.jpg);
 
-            .lottie_box {
-                width: 370px;
-                height: 391px;
-                transform : translate(701px, 358px);
-                .lottie_player {
+            .play_tv_box {
+                transform: translate(370px, 79.5px);
+            }
+            .play_tv {
+                width: 100%;
+                height: 100%;
+                &_link {
+                    display: block;
                     width: 100%;
-                    height: auto;
+                    height: 100%;
                 }
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .lottie_box {
+                position: absolute;
+                width: 32%;
+                right: 7%;
+                bottom: 0;
             }
         }
         &4 {
@@ -292,15 +333,75 @@
            background-color: #73b77e;
             background-image: url(../../images/main/BG_earth.jpg);
 
-            .lottie_box1 {
-                width: 360px;
-                height: 360px;
-                transform : translate(41px, 149px);
+            .lottie_box {
+                position: absolute;
+                width: 28%;
+                top: 23.5%;
+                &1 {
+                    left: 5.5%;
+                }
+                &2 {
+                    left: 30%;
+                }
             }
-            .lottie_box2 {
-                width: 360px;
-                height: 360px;
-                transform : translate(335px, 149px);
+
+
+            .earth_notice {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                font-size: 16px;
+                &_wrap {
+                    position: absolute;
+                    width: 34%;
+                    height: 36%;
+                    overflow: hidden;
+                    right: 3.3%;
+                    bottom: 10%;
+                }
+                &_link {
+                    display: block;
+                    height: 100%;
+                    width: 100%;
+                    text-align: center;
+                    box-sizing: border-box;
+                }
+                &_tit {
+                    display: block;
+                    margin: 26px 0 22px;
+                    font-size: 24px;
+                    line-height: 1.2;
+                    color: #3cb371;
+                }
+                &_cont {
+                    font-size: 16px;
+                    line-height: 24px;
+                    height: 72px;
+                    padding: 0 20px;
+                }
+                &_paging {
+                    position: absolute;
+                    width: 100%;
+                    left: 0;
+                    bottom: 13%;
+                    z-index: 10;
+                    .swiper-pagination-bullet {
+                        width: 1em;
+                        height: 1em;
+                        margin: 0 0.4em;
+                        &-active {
+                            background-color: #3cb371;
+                        }
+                    }
+
+                }
+            }
+            @media (max-width: 1160px) {
+                .earth_notice {
+                    font-size: 1.5vw;
+                }
             }
         }
     }

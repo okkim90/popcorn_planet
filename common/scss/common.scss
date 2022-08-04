@@ -2510,9 +2510,7 @@
     }
 
     #container {
-        &.main {
-            padding-top: 60px;
-        }
+
         @at-root #header.header ~ &.sub_m {
             padding-top: 100px;
         }
@@ -2541,6 +2539,9 @@
         padding-bottom: 0;
         border-bottom: none;
         box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.05);
+        @at-root .main & {
+            box-shadow: none;
+        }
         &_top {
             padding: 0 20px;
             padding-right: 20px;
