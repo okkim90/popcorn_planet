@@ -23,6 +23,28 @@
         @media (max-width: 767px) {
            padding: 0;
         }
+
+        &_tit {
+            display: none;
+            height: 14%;
+            position: absolute;
+            top: 12.5%;
+            width: 100%;
+            text-align: center;
+            left: 0;
+            z-index: 99;
+            @media (max-width: 767px) {
+                display: block;
+            }
+            a {
+                height: 100%;
+                display: inline-block;
+                img {
+                    height: 100%;
+                }
+            }
+        }
+
         .lottie_box {
             .lottie_player {
                 width: 100%;
@@ -111,6 +133,9 @@
 
 
             background-image: url(../../images/main/BG_story.jpg);
+            @media (max-width: 767px) {
+                background-image: url(../../images/main/BG_story_m.png);
+            }
             background-color: #8780bc;
             .lottie_box {
                 position: absolute;
@@ -196,7 +221,9 @@
             }
             background-color: #ee869d;
             background-image: url(../../images/main/BG_press.jpg);
-
+            @media (max-width: 767px) {
+                background-image: url(../../images/main/BG_press_m.png);
+            }
             .img_item {
                 position: absolute;
                 width: 15.8%;
@@ -216,9 +243,9 @@
                     top: 0;
                 }
                 @media (max-width: 767px) {
-                    width: 76%;
-                    left: 8%;
-                    top: 22%;
+                    width: 74%;
+                    left: 6%;
+                    top: 25%;
                 }
             }
 
@@ -301,7 +328,7 @@
                 bottom: 5%;
                 @media (max-width: 767px) {
                     max-width: none;
-                    width: 160%;
+                    width: 154%;
                     right: -5%;
                     bottom: -4%;
                 }
@@ -312,9 +339,9 @@
                 left: 12.5%;
                 top: 48.5%;
                 @media (max-width: 767px) {
-                    width: 44%;
-                    left: 12.5%;
-                    top: 45%;
+                    width: 43%;
+                    left: 10%;
+                    top: 47.5%;
                 }
             }
             .svg_cont4 {
@@ -394,7 +421,9 @@
             }
             background-color: #55c1dd;
             background-image: url(../../images/main/BG_play.jpg);
-
+            @media (max-width: 767px) {
+                background-image: url(../../images/main/BG_play_m.png);
+            }
             .play_tv_box {
                 transform: translate(370px, 79.5px);
             }
@@ -461,7 +490,9 @@
            }
            background-color: #73b77e;
             background-image: url(../../images/main/BG_earth.jpg);
-
+            @media (max-width: 767px) {
+                background-image: url(../../images/main/BG_earth_m.png);
+            }
             .lottie_box {
                 position: absolute;
                 width: 28%;
