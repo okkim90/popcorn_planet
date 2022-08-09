@@ -75,7 +75,7 @@
                                 <div class="member_box">
                                     <!-- 팝플 가입일 경우 .member_box_img 에 .ty_pp_member 클래스 추가 -->
                                     <div class="member_box_img img_box ty_pp_member">
-                                        <img src="./images/nav_all/thumb.jpg" alt="" style="object-fit: contain;">
+                                        <img src="./images/nav_all/thumb.jpg" alt="">
                                     </div>
                                     <div class="member_box_info">
                                         <div class="member_box_name">
@@ -203,7 +203,7 @@
                                             </h2>
                                             <svg xmlns="http://www.w3.org/2000/svg" id="" viewBox="0 0 1160 720"  class="svg_cont pc_only">
                                                 <image href="./images/main/main_con1.svg" width="1160" height="720" class="" />
-                                                <!-- 스토리콘 작품 리스트 -->
+                                                <!--[DEV] 스토리콘 작품 리스트 -->
                                                 <foreignObject x="431px" y="119px" width="320px" height="300px" class="main_story_list_wrap"  xmlns="http://www.w3.org/1999/xhtml">
                                                     <ul class="main_story_list">
                                                         <li class="main_story_list_item">
@@ -302,6 +302,12 @@
                                             <a href="" class="lottie_box">
                                                 <lottie-player src="./images/main/painting.json" class="lottie_player" background="transparent" speed="3" loop autoplay ></lottie-player>
                                             </a>
+                                            <!-- [DEV] 스토리콘\소설\메인 -->
+                                            <a href="" class="con_link con_link1"><span class="blind">스토리콘 소설 메인</span></a>
+                                            <!-- // -->
+                                            <!--[DEV] 스토리콘\웹툰\메인 -->
+                                            <a href="" class="con_link con_link2"><span class="blind">스토리콘 웹툰 메인</span></a>
+                                            <!-- // -->
                                         </div>
                                     </div>
                                 </div>
@@ -1551,7 +1557,9 @@
                                                     <div class="earth_notice_paging"></div>
                                                 </div>
                                             </div>
-
+                                            <!-- [DEV] 시민과학콘\우동수비대\메인 -->
+                                            <a href="" class="con_link con_link2"><span class="blind">시민과학콘 우동수비대 메인</span></a>
+                                            <!--//-->
                                         </div>
                                     </div>
                                 </div>
@@ -1594,6 +1602,28 @@
                                         </ul>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="main_banner">
+                                <ul class="main_banner_list swiper-wrapper">
+                                    <li class="main_banner_item swiper-slide">
+                                        <a href="" class="main_banner_link">
+                                            <img src="./images/main/main_banner1.jpg" alt="" class="main_banner_img ty_pc">
+                                            <img src="https://kids.dongascience.com/upload/storycon/2022/07/16584504412873.jpg" alt="" class="main_banner_img ty_m">
+                                        </a>
+                                    </li>
+                                    <li class="main_banner_item swiper-slide">
+                                        <a href="" class="main_banner_link">
+                                            <img src="https://picsum.photos/580/45" alt="" class="main_banner_img ty_pc">
+                                            <img src="https://kids.dongascience.com/upload/storycon/2022/05/16521626493411.png" alt="" class="main_banner_img ty_m">
+                                        </a>
+                                    </li>
+                                    <li class="main_banner_item swiper-slide">
+                                        <a href="" class="main_banner_link" >
+                                            <img src="https://picsum.photos/1160/90" alt="" class="main_banner_img ty_pc">
+                                            <img src="https://kids.dongascience.com/upload/storycon/2022/07/16566649812749.jfif" alt="" class="main_banner_img ty_m">
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -1668,10 +1698,10 @@
                     speed: 600,
                     //effect: "fade",
                     loop: true,
-                    autoplay: {
-                         delay: 4500,
-                         disableOnInteraction: false,
-                    },
+                    //autoplay: {
+                    //     delay: 4500,
+                    //     disableOnInteraction: false,
+                    //},
                     pagination: {
                         clickable:true,
                         el: '.con_list_paging',
@@ -1707,6 +1737,38 @@
                  delay: 4500,
                  disableOnInteraction: false,
             }
+        });
+
+
+
+        let ww = window.innerWidth;
+        let main_banner;
+        responsiveSwiper();
+
+        function initSwiper(effect) {
+            if (typeof(main_banner) == 'object') main_banner.destroy();
+
+            return main_banner = new Swiper('.main_banner', {
+                loop: true,
+                slidesPerView: 1,
+                speed: 600,
+                autoplay: {
+                    delay: 4500,
+                    disableOnInteraction: false,
+                },
+                effect: effect
+            })
+        }
+        function responsiveSwiper() {
+            if (ww >= 768) {
+                initSwiper('fade');
+            } else if (ww < 768) {
+                initSwiper('slide');
+            }
+        }
+        window.addEventListener('resize', function() {
+            ww = window.innerWidth;
+            responsiveSwiper();
         });
     </script>
 </body>
