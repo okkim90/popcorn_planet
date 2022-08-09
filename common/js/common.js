@@ -153,8 +153,10 @@ $(function(){
 
     if(isMobile()){
         $('#tab_bar').css({'display':'block'});
+        $('.footer').addClass('mobile');
     }else{
-        $('#tab_bar').css({'display':'none'});
+        $('#tab_bar').css({'display':'block'});
+        $('.footer').removeClass('mobile');
     }
 
 });
