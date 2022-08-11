@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="276.93" height="332.53" viewBox="0 0 276.93 332.53">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_3305" data-name="사각형 3305" width="276.93" height="332.53" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-3">
+      <rect id="사각형_3300" data-name="사각형 3300" width="276.93" height="14.706" transform="translate(0 317.824)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="그룹_3289" data-name="그룹 3289" transform="translate(-453 -1.25)">
+    <g id="액자" transform="translate(453 1.25)">
+      <g id="그룹_2768" data-name="그룹 2768" clip-path="url(#clip-path)">
+        <g id="그룹_2765" data-name="그룹 2765">
+          <g id="그룹_2764" data-name="그룹 2764" clip-path="url(#clip-path)">
+            <g id="그룹_2763" data-name="그룹 2763" opacity="0.2">
+              <g id="그룹_2762" data-name="그룹 2762">
+                <g id="그룹_2761" data-name="그룹 2761" clip-path="url(#clip-path-3)">
+                  <path id="패스_7676" data-name="패스 7676" d="M276.93,325.177c0,4.061-61.993,7.353-138.465,7.353S0,329.238,0,325.177s61.993-7.353,138.465-7.353,138.465,3.292,138.465,7.353"/>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+        <rect id="사각형_3302" data-name="사각형 3302" width="230" height="300" transform="translate(23.465 1.499)" fill="#fff"/>
+        <g id="그룹_2767" data-name="그룹 2767">
+          <g id="그룹_2766" data-name="그룹 2766" clip-path="url(#clip-path)">
+            <path id="패스_7677" data-name="패스 7677" d="M253.465,303h-230a1.5,1.5,0,0,1-1.5-1.5V1.5a1.5,1.5,0,0,1,1.5-1.5h230a1.5,1.5,0,0,1,1.5,1.5v300a1.5,1.5,0,0,1-1.5,1.5m-228.5-3h227V3h-227Z"/>
+            <rect id="사각형_3303" data-name="사각형 3303" width="252.543" height="22.749" transform="translate(12.193 301.499)" fill="#8c8c8c"/>
+            <path id="패스_7678" data-name="패스 7678" d="M264.736,325.748H12.194a1.5,1.5,0,0,1-1.5-1.5V301.5a1.5,1.5,0,0,1,1.5-1.5H264.736a1.5,1.5,0,0,1,1.5,1.5v22.748a1.5,1.5,0,0,1-1.5,1.5m-251.042-3H263.236V303H13.694Z"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
