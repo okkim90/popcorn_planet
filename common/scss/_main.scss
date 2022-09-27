@@ -113,6 +113,125 @@
             }
         }
 
+        .ico_detail {
+            position: absolute;
+            display: flex;
+            border-radius: 15px;
+            &::before {
+                content:'';
+                opacity: 0;
+                position: absolute;
+                width: 24px;
+                height: 24px;
+                left: 0;
+                top: 0;
+                border-radius: 12px 0 0 12px;
+                background-color: violet;
+                transition: opacity .2s ease-in-out;
+            }
+
+            &1 {
+                left: 32%;
+                top: 61%;
+            }
+            &2 {
+                right: 22%;
+                bottom: 21%;
+            }
+            &3 {
+                right: 13%;
+                top: 29%;
+            }
+            i {
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                background-color: violet;
+                position: relative;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 14px;
+                    height: 2px;
+                    background-color: #fff;
+                    left: 50%;
+                    top: 50%;
+                    margin-top: -1px;
+                    margin-left: -7px;
+                    border-radius: 1px;
+                    transition: all .2s ease-in-out;
+                }
+                &::after {
+                    content:'';
+                    position: absolute;
+                    width: 2px;
+                    height: 14px;
+                    background-color: #fff;
+                    left: 50%;
+                    top: 50%;
+                    margin-top: -7px;
+                    margin-left: -1px;
+                    border-radius: 1px;
+                    transition: all .2s ease-in-out;
+                }
+            }
+            a {
+                visibility: hidden;
+                opacity: 0;
+                position: absolute;
+                line-height: 24px;
+                white-space: nowrap;
+                color: #fff;
+                padding-right: 6px;
+                padding-left: 24px;
+                left: 0;
+                top: 0;
+                font-size: 12px;
+                font-weight: 500;
+                border-radius: 12px;
+                z-index: 1;
+                transition: opacity .2s ease-in-out;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 24px;
+                    right: 0;
+                    height: 100%;
+                    background-color: violet;
+                    border-radius: 0 12px 12px 0;
+                    z-index: -1;
+                }
+            }
+
+            &:hover, &.on {
+                &::before {
+                   opacity: 1;
+                }
+            }
+
+            &.on a,
+            &:hover a {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            &.on i,
+            &:hover i {
+                &::before {
+                    transform: rotate(-45deg);
+                    width: 9px;
+                    top: 60%;
+                    transform-origin: 0 0;
+                }
+                &::after {
+                    transform: rotate(90deg);
+                    top: 60%;
+                }
+            }
+        }
+
+
         @keyframes link_ani {
             0% { -webkit-transform: rotate(0); transform: rotate(0); }
             5% { -webkit-transform: rotate(4deg); transform: rotate(4deg); }
