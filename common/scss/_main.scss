@@ -117,6 +117,7 @@
             position: absolute;
             display: flex;
             border-radius: 15px;
+            z-index: 10;
             &::before {
                 content:'';
                 opacity: 0;
@@ -139,7 +140,7 @@
                 bottom: 21%;
             }
             &3 {
-                right: 13%;
+                right: 23%;
                 top: 29%;
             }
             i {
