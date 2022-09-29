@@ -260,6 +260,7 @@
                 top: 0;
                 z-index: -1;
                 transition: all .2s .4s ease-in-out;
+                pointer-events: none;
                 &::before {
                     content:'';
                     position: absolute;
